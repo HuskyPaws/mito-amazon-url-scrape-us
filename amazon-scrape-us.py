@@ -140,7 +140,7 @@ def scrape_data(url, api_key, max_retries=5, initial_delay=2):
                         if "Item model number" in bullet_points:
                             model_number = bullet_points.split("Item model number")[1].strip().split("\n")[0].strip()
                             data_dict["Item model number"] = model_number.split(":")[1].strip() if ":" in model_number else model_number.strip()
-                elif element['selector'] == "//table[@id='productDetails_techSpec_section_1']":
+                elif element['selector'] == "//table[@id='productDetails_detailBullets_sections1']":
                     if element['results']:
                         table_data = element['results'][0].get('text', '')
                         if "Manufacturer" in table_data:
