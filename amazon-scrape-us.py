@@ -24,7 +24,7 @@ def get_db_connection():
     return conn
 
 # Streamlit app title
-st.title("Amazon Product Data Scraper - UK")
+st.title("Amazon Product Data Scraper - US")
 
 # Sidebar inputs
 st.sidebar.header("Input Options")
@@ -82,7 +82,7 @@ def scrape_data(url, api_key, max_retries=5, initial_delay=2):
             "api_key": api_key,
             "url": url,
             "premium_proxies": True,
-            "country": "gb",
+            "country": "us",
             "elements": [
                 {
                     "type": "xpath",
