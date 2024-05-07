@@ -98,7 +98,7 @@ def scrape_data(url, api_key, max_retries=5, initial_delay=2):
                 },
                 {
                     "type": "xpath",
-                    "selector": "//table[@id='productDetails_techSpec_section_1']"
+                    "selector": "//table[@id='productDetails_detailBullets_sections1']"
                 }
             ],
             "json_response": True
